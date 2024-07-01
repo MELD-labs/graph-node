@@ -114,7 +114,7 @@ impl ApiSchema {
     /// `api_schema`. In particular, the `Query` type has fields called
     /// `__schema` and `__type`
     pub(in crate::schema) fn from_api_schema(mut schema: Schema) -> Result<Self, anyhow::Error> {
-        add_introspection_schema(&mut schema.document);
+        // add_introspection_schema(&mut schema.document);
 
         let query_type = schema
             .document

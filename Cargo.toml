@@ -12,6 +12,7 @@ members = [
     "graph",
     "tests",
     "graph/derive",
+    "introspection",
 ]
 
 [workspace.package]

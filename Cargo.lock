@@ -1814,6 +1814,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "graph-introspection"
+version = "0.35.1"
+dependencies = [
+ "graph",
+]
+
+[[package]]
 name = "graph-node"
 version = "0.35.1"
 dependencies = [

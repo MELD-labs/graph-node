@@ -1,0 +1,11 @@
+[package]
+name = "graph-introspection"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "graph-introspection"
+path = "src/main.rs"
+
+[dependencies]
+graph = { path = "../graph" }

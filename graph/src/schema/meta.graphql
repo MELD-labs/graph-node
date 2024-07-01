@@ -14,10 +14,10 @@ directive @include(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
 # The Graph extensions
 
 "Marks the GraphQL type as indexable entity.  Each type that should be an entity is required to be annotated with this directive."
-directive @entity on OBJECT
+directive @entity(immutable: Boolean) on OBJECT
 
 "Defined a Subgraph ID for an object type"
-directive @subgraphId(id: String!) on OBJECT
+directive @subgraphId(id: String!) on OBJECT | ENUM | INTERFACE | INPUT_OBJECT | SCALAR
 
 "creates a virtual field on the entity that may be queried but cannot be set manually through the mappings API."
 directive @derivedFrom(field: String!) on FIELD_DEFINITION
@@ -54,12 +54,6 @@ type _Meta_ {
 
 input BlockChangedFilter {
   number_gte: Int!
-}
-
-input Block_height {
-  hash: Bytes
-  number: Int
-  number_gte: Int
 }
 
 type _Block_ {
